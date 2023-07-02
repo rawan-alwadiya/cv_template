@@ -1,0 +1,201 @@
+/* https://youtu.be/c9Yn20h2Jxw */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background: #c4c4c4;
+    font-size: 14px;
+    line-height: 20px;
+}
+.cv_wrapper {
+    display: flex;
+    width: 800px;
+    margin: 50 auto;
+    background: #fff;
+    padding: 10px;
+}
+.cv_wrapper .cv_left{
+    width: 35%;
+    background: #26252d;
+}
+.cv_wrapper .cv_left .cv_image{
+    width:100%;
+}
+.cv_wrapper .cv_left .cv_image img{
+    width: 100%;
+    display: block;
+    height: 200px;
+}
+.cv_wrapper .cv_title{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+.cv_wrapper .cv_left .cv_info{
+    color: #84838b;
+}
+.cv_wrapper .cv_left .cv_bottom{
+    padding: 20px 30px;
+}
+.cv_wrapper .cv_item{
+    padding: 20px 0;
+    border-bottom: 1px solid #0175b2;
+}
+.cv_wrapper .cv_item:last-child{
+    border-bottom: 0;
+}
+.cv_wrapper .cv_left .cv_namerule{
+    display: none;
+}
+.cv_wrapper .cv_namerule .name{
+    font-size: 20px;
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 5px;
+    letter-spacing: 4px;
+}
+.cv_wrapper .cv_left .cv_namerule .role{
+    color: #84838b;
+}
+.cv_wrapper .cv_left .cv_contact .cv_info:last-child{
+    margin-top: 10px;
+}
+.cv_wrapper .cv_left .cv_contact .cv_subtitle{
+    color:#fff;
+    margin-bottom: 2px;
+}
+.cv_wrapper .cv_left .cv_skills .skills_list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+.cv_wrapper .cv_left .cv_skills .skills_list .skills_bar p{
+    position: relative;
+    width: 125px;
+    height: 20px;
+    background: #fff;
+}
+.cv_wrapper .cv_left .cv_skills .skills_list .skills_bar p span{
+    position: absolute;
+    top: 0;
+    left:0;
+    background: #0175b2;
+    width: 100%;
+    height: 100%;
+}
+.cv_wrapper .cv_right{
+    width: 65%;
+    padding: 20px 40px;
+}
+.cv_wrapper .cv_right .cv_namerule .name{
+    color: #26252d;
+    font-size: 28px;
+}
+.cv_wrapper .cv_right .cv_namerule .role{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.cv_wrapper .cv_right .cv_item .cv_title{
+    color: #26252d;
+}
+.cv_wrapper .cv_right .cv_data{
+    display: flex;
+}
+.cv_wrapper .cv_right .cv_data .year{
+    padding-right: 35px;
+    width: 115px;
+    position: relative;
+}
+.cv_wrapper .cv_right .cv_data .content{
+    padding-left: 35px;
+    margin-bottom: 20px;
+    width: calc(100% - 115px);
+}
+.cv_wrapper .cv_right .cv_data .year:before{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 1px solid #26252d;
+    border-radius: 50%;
+}
+.cv_wrapper .cv_right .cv_data .year:after{
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #0175b2;
+}
+.cv_wrapper .cv_right .cv_data:last-child .year:after{
+    display: none;
+}
+.cv_wrapper .cv_right .cv_interests .cv_info{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.cv_wrapper .cv_right .cv_interests .interests .int_icon{
+    font-size: 38px;
+    color: #0175b2;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .cv_wrapper .cv_right .cv_namerule{
+        display: none;
+    }
+    .cv_wrapper .cv_left .cv_namerule{
+        display: block;
+    }
+    .cv_wrapper{
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .cv_wrapper .cv_left,
+    .cv_wrapper .cv_right{
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 424px){
+    .cv_wrapper .cv_right{
+        padding: 20px 30px;
+    }
+    .cv_wrapper .cv_right .cv_data{
+        flex-direction: column;
+    }
+    .cv_wrapper .cv_right .cv_data .year{
+        padding: o;
+        margin: 5px;
+        width: 100%;
+        columns: #0175b2;
+    }
+    .cv_wrapper .cv_right .cv_data .year:before,
+    .cv_wrapper .cv_right .cv_data .year:after{
+        display: none;
+    }
+    .cv_wrapper .cv_right .cv_data .content{
+        width: 100%;
+        padding: 0;
+    }
+    .cv_wrapper .cv_right .interests .int_icon{
+        font-size: 24px;
+    }
+}
